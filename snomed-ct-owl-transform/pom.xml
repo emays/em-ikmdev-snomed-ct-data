@@ -18,7 +18,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <build>
+ 	<profiles>
+		<profile>
+			<id>testDataBuild</id>
+			   <build>
         <plugins>
             <plugin>
                 <groupId>dev.ikm.maven.tinkar</groupId>
@@ -38,4 +41,6 @@
             </plugin>
         </plugins>
     </build>
+		</profile>
+		</profiles>
 </project>

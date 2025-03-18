@@ -45,19 +45,28 @@ public class SnomedTransformationMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException {
         try {
-            this.namespace = UUID.fromString(namespaceString);
-
-            File datastore = new File(datastorePath);
-            String unzippedData = unzipRawData(inputDirectoryPath);
-            File inputFileOrDirectory = new File(unzippedData);
+        	Thread.sleep(10000);
+			this.namespace = UUID.fromString(namespaceString);
+			LOG.info("datastorePath: " + datastorePath);
+			File datastore = new File(datastorePath);
+            LOG.info("inputDirectoryPath: " + inputDirectoryPath);
+//            String unzippedData = unzipRawData(inputDirectoryPath);
+//            LOG.info("unzippedData: " + unzippedData);
+            File inputFileOrDirectory = new File(inputDirectoryPath);
+            LOG.info("inputFileOrDirectory: " + inputFileOrDirectory);
             validateInputDirectory(inputFileOrDirectory);
 
             transformFile(datastore, inputFileOrDirectory);
         } catch (IllegalArgumentException e) {
             throw new MojoExecutionException("Invalid namespace for UUID formatting");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        } 
+//        catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+ catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+   throw new RuntimeException(e);
+		}
     }
 
     private String unzipRawData(String zipFilePath) throws IOException {
