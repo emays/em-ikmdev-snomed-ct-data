@@ -190,6 +190,8 @@ public class SnomedTransformationMojo extends AbstractMojo {
             return new DescriptionTransformer(namespace);
         } else if(fileName.contains("Language")){
             return new LanguageTransformer(namespace);
+        } else if (fileName.contains("Identifier")) {
+            return new IdentifierTransformer(namespace);
         } else if(fileName.contains("OWLExpression")){
             return new AxiomSyntaxTransformer(namespace);
         }
