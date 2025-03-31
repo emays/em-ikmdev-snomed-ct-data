@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.ikm.tinkar</groupId>
         <artifactId>snomed-ct-data-bom</artifactId>
-        <version>1.7.0</version>
+        <version>1.8.0</version>
         <relativePath/>
     </parent>
 
@@ -18,14 +18,14 @@
     <name>SNOMED CT Data</name>
 
     <modules>
-        <module>snomed-ct-origin</module>
+<!--        <module>snomed-ct-origin</module>-->
         <module>plugin</module>
         <module>snomed-ct-starterdata</module>
-        <module>snomed-ct-binding</module>
+<!--        <module>snomed-ct-binding</module>-->
         <module>snomed-ct-pipeline</module>
         <module>snomed-ct-owl-transform</module>
-        <module>snomed-ct-reasoner</module>
-        <module>snomed-ct-integration</module>
+<!--        <module>snomed-ct-reasoner</module>-->
+<!--        <module>snomed-ct-integration</module>-->
     </modules>
 
     <properties>

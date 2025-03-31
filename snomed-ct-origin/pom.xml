@@ -26,6 +26,9 @@
     <!--            <url></url>-->
     <!--        </snapshotRepository>-->
     <!--    </distributionManagement>-->
+	<profiles>
+		<profile>
+			<id>testDataBuild</id>
     <build>
         <plugins>
             <!-- Unzip source data -->
@@ -136,4 +139,6 @@
             <!--            </plugin>-->
         </plugins>
     </build>
+		</profile>
+		</profiles>
 </project>
